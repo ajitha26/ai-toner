@@ -1,0 +1,7 @@
+[
+  "tests/test_ai_generation.py::test_ai_response",
+  "tests/test_ai_logic.py::test_prompt_formatting",
+  "tests/test_api_routes.py::test_generate_endpoint",
+  "tests/test_api_routes.py::test_history_endpoint",
+  "tests/test_full_flow.py::test_full_user_flow"
+]
