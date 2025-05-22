@@ -10,7 +10,7 @@ query = st.text_area("Enter your question or topic:", height=100)
 
 if st.button("Generate") and query:
     with st.spinner("Generating responses..."):
-        res = requests.post("https://ai-toner-3.onrender.com/generate", json={"user_id": user_id, "query": query})
+        res = requests.post("https://ai-toner-4.onrender.com/generate", json={"user_id": user_id, "query": query})
         print("RESULT:",res)
         data = res.json()
 
@@ -21,7 +21,7 @@ if st.button("Generate") and query:
         st.write(data["formal_response"])
 
 st.sidebar.header("📜 History")
-res = requests.get(f"https://ai-toner-3.onrender.com/history?user_id={user_id}")
+res = requests.get(f"https://ai-toner-4.onrender.com/history?user_id={user_id}")
 history = res.json()
 for item in history:
     with st.sidebar.expander(item["query"]):
